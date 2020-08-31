@@ -24,16 +24,5 @@ func main() {
 		cancel()
 	}()
 
-	err := startService(ctx)
-	if err != nil {
-		cancel()
-		panic(err)
-	}
-}
-
-func startService(ctx context.Context) error {
 	vehicle.Start(ctx)
-
-	return nil
-
 }
