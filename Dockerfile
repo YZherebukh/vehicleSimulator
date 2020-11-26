@@ -18,7 +18,7 @@ RUN go mod download
 COPY . .
 
 # Build the application
-RUN go build ./cmd/vehicleSimulator/main.go
+RUN go build ./cmd/vehiclesimulator/main.go
 
 # Copy binary from build to main folder
 ##RUN cp ./cmd/faceit/faceit .

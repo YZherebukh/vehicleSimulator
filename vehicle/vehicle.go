@@ -49,7 +49,8 @@ func Start(ctx context.Context) {
 				case <-ctx.Done():
 					wg.Done()
 					return
-				case <-time.Tick(time.Second):
+				default:
+					time.Sleep(time.Second)
 					v.move()
 					v.sendPosition()
 				}
